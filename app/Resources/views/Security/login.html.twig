@@ -8,11 +8,12 @@
         <h3>Login</h3>
     </div>
     <div class="panel panel-body">
-        <% if errors %>
+        {% if errors %}
+
             <div class="alert alert-danger">
-                {{ error.messageKey }}
+                {{ errors.messageKey }}
             </div>
-        <% endif %>
+        {% endif %}
         <form action="{{ path('login') }}" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -22,7 +23,7 @@
 
             <div class="form-group">
                 <label for="username">Password:</label>
-                <input type="text" name="_password" id="password" class="form-control">
+                <input type="password" name="_password" id="password" class="form-control">
             </div>
 
             <button class="btn btn-info pull-right">Connect</button>
