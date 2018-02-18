@@ -168,4 +168,3 @@ class User implements UserInterface
         // TODO: Implement eraseCredentials() method.
     }
 }
-
